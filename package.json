@@ -1,0 +1,35 @@
+{
+  "name": "vscode-typescript-jest",
+  "version": "0.1.0",
+  "description": "Template/test project for using VS Code with Typescript and Jest",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-ts",
+    "build-ts": "tsc",
+    "test": "jest --forceExit"
+  },
+  "author": "Anticrisis",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^2.3.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/scripts/jest-transform.js"
+    },
+    "testMatch": [
+      "**/tests/*.test.(ts|tsx|js)"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^19.2.4",
+    "jest": "^20.0.4",
+    "tslint": "^5.4.3",
+    "tslint-language-service": "^0.9.6"
+  }
+}
